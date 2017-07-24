@@ -1,0 +1,105 @@
+
+class Main {
+
+	
+public class Tv{
+	private String name;
+	private int size;
+	private int price;
+	private boolean curved;
+
+	public static Tv (String name, int size, int price, boolean curved){
+		this.name = name;
+		this.size = size;
+		this.price = price;
+		this.curved = curved;
+		}
+
+		public String getName(){
+			return name;
+		}
+		
+		public int getSize(){
+			return size;
+		}
+		
+		public int getPrice(){
+			return price;
+		}
+		
+		public boolean getCurved(){
+			return curved;
+		}
+			
+			
+		public String plugIn(){
+			return "TV --> Plugged in";
+		}
+		public String turnOn(){
+			return "Tv --> Turned on";
+		}
+		public String turnOff(){
+			return "Tv --> Turned off";
+		}
+	}
+		
+class Lg extends Tv{
+	public Lg(String name, int size, int price, boolean curved){
+		super(name,size,price,curved);
+		
+		@Override
+		public String plugIn(){
+			return "LG --> plugIn()";
+		}
+		
+		@Override
+		public String turnOn(){
+			return "LG --> TurnOn";
+		}
+		
+		@Override
+		public String turnOff(){
+			return "LG --> TurnOff;
+		}		
+	}
+}
+
+class Samsung extends Tv{
+	public Samsung(String name, int size, int price, boolean curved){
+		super(name,size,price,boolean);
+	}
+	
+		@Override
+		public String plugIn(){
+			return "Samsung --> plugIn()";
+		}
+		
+		@Override
+		public String turnOn(){
+			return "Samsung --> TurnOn";
+		}
+		
+		@Override
+		public String turnOff(){
+			return "Samsung --> TurnOff;
+		}		
+
+}	
+	
+	public static void main(String[] args){
+		
+		Lg lg = new Lg("49UH603V", 49, 8999, false);
+		System.out.println(Lg.plugIn());
+		System.out.println(Lg.turnOn());
+		System.out.println(Lg.turnOff());
+		
+		Samsung.out.println("**************");
+		
+		Samsung samsung = new Samsung("UA55KU7000KA",55,11999,true);
+		System.out.println(Samsung.plugIn());
+		System.out.println(Samsung.turnOn());
+		System.out.println(Samsung.turnOff());
+		
+	}
+
+}
